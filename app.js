@@ -23,6 +23,20 @@ function actualizarListaAmigos() {
   }
 }
 
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    alert("No hay amigos para sortear");
+    return;
+  }
+
+  let indice = Math.floor(Math.random() * amigos.length);
+  let amigoSorteado = amigos[indice];
+
+  document.getElementById(
+    "resultado"
+  ).innerHTML = `El amigo secreto es: ${amigoSorteado}`;
+}
+
 function limpiarCampoEntrada() {
   document.getElementById("amigo").value = "";
 }
