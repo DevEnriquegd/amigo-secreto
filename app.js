@@ -32,9 +32,11 @@ function sortearAmigo() {
   let indice = Math.floor(Math.random() * amigos.length);
   let amigoSorteado = amigos[indice];
 
+  document.getElementById("listaAmigos").style.display = "none";
+
   document.getElementById(
     "resultado"
-  ).innerHTML = `El amigo secreto es: ${amigoSorteado}`;
+  ).innerHTML = `Tu amigo secreto es: ${amigoSorteado}`;
 }
 
 function limpiarCampoEntrada() {
